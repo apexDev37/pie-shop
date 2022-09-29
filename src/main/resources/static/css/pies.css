@@ -1,0 +1,326 @@
+/* Reset the default margins of all elements to zero */
+* {
+    margin: 0;
+}
+
+/* All the html doc body to take up the entire page - 100% */
+html, body {
+    height: 100%;
+}
+
+/* Defaults for the website */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #999;
+}
+
+p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a493c0;
+    padding: 10px;
+}
+
+/* CSS style rules for the header and footer navigation links */
+nav a:visited,
+nav a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: block;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 5px 0 5px;
+}
+
+/* CSS rule for the main element */
+main {
+    display: block;
+    background-image: url('../images/background.png');
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+/* Rule for the footer */
+footer {
+    padding: 10px;
+}
+
+/* Rule for the padding for the aside and article element */
+aside, article {
+    padding: 2em;
+}
+
+/* Rule to center the logo */
+aside {
+    text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+/* Style rules for the pie layout */
+.columns {
+    display: flex;
+}
+
+.pie {
+    background-color: #fff;
+    width: 200px;
+    width: 310px;
+    height: 240px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px #ccc;
+}
+
+.pie img {
+    width: 100%;
+}
+
+.pie .title {
+    font-weight: bold;
+}
+
+.pie .columns {
+    width: 100%;
+}
+
+.pie .price {
+    text-align: right;
+}
+
+.pie .columns div {
+    width: 50%;
+}
+
+.pie button {
+    background-color: #f6aeae;
+    border: solid 1px #f6aeae;
+    padding: 10px;
+    border-radius: 50px;
+    width: 72px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style rules for the add to cart button */
+.cart-quantity-button {
+    display: flex;
+    flex-direction: row;
+    row-gap: 0;
+    width: 150px;
+}
+
+.cart-quantity-button input {
+    row-gap: 0;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    border-style: none;
+    outline: none;
+    background-color: #f5e1e1;
+    font-size: 16px;
+    /* border-radius: 8px; */
+}
+
+.pie .quantity-btn {
+    width: 40px;
+    height: 37px;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: default;
+}
+
+#increment-btn {
+    border-radius: 0 8px 8px 0;
+}
+
+#decrement-btn {
+    border-radius: 8px 0 0 8px;
+}
+
+
+/* CSS rules to target the DESKTOP layout experience */
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    aside img {
+        margin-left: 2%;
+    }
+
+    article {
+        width: 720px;
+    }
+
+    .columns-desktop {
+        display: flex;
+        width: 720px;
+        flex-wrap: wrap;
+    }
+
+    /* Style rules for the cart container */
+    .cart-container {
+        background-color: #fff;
+        width: 306px;
+        height: 720px;
+        padding: 14px;
+        margin-top: 38px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 6px;
+        border-bottom: solid 2px #CDC6D2;
+    }
+
+    .cart-header > p {
+        font-weight: 500;
+        color: #CDC6D1;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .cart-header .cart-icon {
+        margin: 5px;
+    }
+
+    .cart-items {
+        display: block;
+        width: 306px;
+        height: 540px;
+        overflow-y: auto;
+    }
+
+    .cart-items::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .cart-items::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: #F5F5F5;
+    }
+
+    .cart-items::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #CDC6D1;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        font-size: 16px;
+    }
+
+    .content.subtotal {
+        border-top: solid 2px #CDC6D2;
+    }
+
+    .content.total {
+        border-bottom: solid 2px #CDC6D2;
+        margin-bottom: 16px;
+    }
+
+    .key {
+        font-weight: 500;
+        color: #CDC6D2;
+    }
+
+    .value {
+        font-weight: 600;
+        color: rgb(0 0 0 / 0.7);
+    }
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .place-order-btn {
+        width: 162px;
+        height: 44px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #FFFFFF;
+        background-color: #4DCFA8;
+        padding: 12px 32px;
+        border-radius: 8px;
+        border-style: none;
+        cursor: pointer;
+        box-shadow: rgb(0 0 0 / 20%) 0 3px 10px;
+    }
+
+    .pie-thumbnail {
+        width: 90px;
+        height: 112px;
+        border-radius: 16px;
+        object-fit: none;
+        object-position: center;
+        margin-right: 32px;
+        /* background-size: center; */
+    }
+
+    .content-columns {
+        display: flex;
+        width: 296px;
+        height: 112px;
+        padding: 16px 0;
+        border-bottom: solid 2px #CDC6D2;
+    }
+
+    .content-titles {
+        width: 69px;
+        height: 92px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #CDC6D2;
+        text-align: right;
+        padding-top: 8px;
+    }
+
+    .content-titles p {
+        margin: 4px;
+    }
+
+    .content-values {
+        width: 54px;
+        height: 92px;
+        font-weight: 600;
+        font-size: 16px;
+        color: rgb(0, 0, 0, 0.75);
+        text-align: left;
+        padding-top: 8px;
+    }
+
+    .content-values p {
+        margin: 4px;
+    }
+}

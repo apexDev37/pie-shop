@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts | Bethany's Pie Shop</title>
+
+  <!-- Include required files here -->
+  <link rel="stylesheet" th:href="@{/css/site.css}" type="text/css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{pies}">Pies</a></li>
+        <li><a th:href="@{contact}">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside><img src="images/logo.png" alt="Bethany's Pie Shop"></aside>
+    <article>
+      <h1>Contact</h1>
+      <p>We are always glad to hear from you!</p>
+      <p><a href="mailto:exampl@bethanyspieshop.com?subject:Intrested%20in%20Pies">Send us an email</a>
+        and let us know how we can help make your occasion special.</p>
+    </article>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{pies}">Pies</a></li>
+        <li><a th:href="@{contact}">Contacts</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

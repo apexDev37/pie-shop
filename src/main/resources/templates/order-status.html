@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts | Bethany's Pie Shop</title>
+
+    <!-- Include required files here -->
+    <link rel="stylesheet" th:href="@{/css/pies.css}" type="text/css">
+    <style>
+      .order-section {
+        margin-bottom: 160px;
+      }
+      .pie button {
+        padding: 11px;
+        width: 121px;
+        cursor: default;
+      }
+      .pie-columns {
+        display: block;
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--  Header  -->
+    <header>
+      <nav>
+        <ul>
+          <li><a th:href="@{/}">Home</a></li>
+          <li><a th:href="@{pies}">Pies</a></li>
+          <li><a th:href="@{contact}">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--  Pie Shop Logo  -->
+      <aside><img th:src="@{/images/logo.png}" alt="Bethany's Pie Shop"></aside>
+
+      <article>
+        <h1>Order Successful</h1>
+        <div class="order-section">
+          <p>We have excitedly received your order!</p>
+          <p><a href="mailto:exampl@bethanyspieshop.com?subject:Interested%20in%20Pies">Send us an email</a>
+            and let us know how we can help make your occasion special.</p>
+        </div>
+
+        <!--  Upcoming Pies Section  -->
+        <section>
+          <h2>Upcoming Pies</h2>
+          <p>Keep a look-out for our new pies coming soon!</p>
+
+          <div class="pie-columns">
+            <!-- Pie item -->
+            <div class="pie">
+
+              <!-- Pie item image and content -->
+              <img th:src="@{images/vanilla-pie.jpeg}" alt="Vanilla Pie">
+              <div class="columns">
+                <div class="title">Vanilla Pie</div>
+                <div class="price">$12.50</div>
+              </div>
+              <p class="desc">New vanilla flavoured pie!</p>
+
+              <!-- Pie item order button -->
+              <button disabled>Coming Soon</button>
+            </div>
+
+            <!-- Pie item -->
+            <div class="pie">
+
+              <!-- Pie item image and content -->
+              <img th:src="@{images/rasberry-pie.jpeg}" alt="Raspberry Pie">
+              <div class="columns">
+                <div class="title">Raspberry Pie</div>
+                <div class="price">$14.50</div>
+              </div>
+              <p class="desc">High quality Raspberry pie!</p>
+
+              <!-- Pie item order button -->
+              <button disabled>Coming Soon</button>
+            </div>
+
+            <!-- Pie item -->
+            <div class="pie">
+
+              <!-- Pie item image and content -->
+              <img th:src="@{images/apricot-pie.jpeg}" alt="Apricot Pie">
+              <div class="columns">
+                <div class="title">Apricot Pie</div>
+                <div class="price">$15.50</div>
+              </div>
+              <p class="desc">Well baked Apricot Pie!</p>
+
+              <!-- Pie item order button -->
+              <button disabled>Coming Soon</button>
+            </div>
+
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!--  Footer  -->
+    <footer>
+      <nav>
+        <ul>
+          <li><a th:href="@{/}">Home</a></li>
+          <li><a th:href="@{pies}">Pies</a></li>
+          <li><a th:href="@{contact}">Contacts</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

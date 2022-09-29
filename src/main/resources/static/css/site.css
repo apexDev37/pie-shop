@@ -1,0 +1,136 @@
+/* Reset the default margins of all elements to zero */
+* {
+    margin: 0;
+}
+
+/* All the html doc body to take up the entire page - 100% */
+html, body {
+    height: 100%;
+}
+
+/* Defaults for the website */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #999;
+}
+
+p {
+    margin: 0.5em 0 0.5em 0;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a493c0;
+    padding: 10px;
+}
+
+/* CSS style rules for the header and footer navigation links */
+nav a:visited,
+nav a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: block;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 5px 0 5px;
+}
+
+/* Handle the fragment and vue container */
+.content-fragment, #app {
+    height: 100%;
+}
+
+/* CSS rule for the main element */
+main {
+    display: block;
+    background-image: url('../images/background.png');
+    padding-top: 4em;
+    padding-bottom: 3em;
+    min-height: 85.5%;
+}
+
+/* Rule for the footer */
+footer {
+    padding: 10px;
+}
+
+/* Rule for the padding for the aside and article element */
+aside, article {
+    padding: 2em;
+}
+
+/* Rule to center the logo */
+aside {
+    text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+/* Style rules for the pie layout */
+.columns {
+    display: flex;
+}
+
+.pie {
+    background-color: #fff;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px #ccc;
+}
+
+.pie img {
+    width: 100%;
+}
+
+.pie .title {
+    font-weight: bold;
+}
+
+.pie .columns {
+    width: 100%;
+}
+
+.pie .price {
+    text-align: right;
+}
+
+.pie .columns div {
+    width: 50%;
+}
+
+.pie button {
+    background-color: #f6aeae;
+    border: solid 1px #f6aeae;
+    padding: 10px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+/* CSS rules to target the DESKTOP layout experience */
+@media only screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        margin-left: 2%;
+    }
+
+    .columns-desktop {
+        display: flex;
+    }
+}

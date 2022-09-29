@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethany's Pie Shop</title>
+
+    <!--  Include required files here  -->
+</head>
+<body>
+    <!--  Main header & navigation bar  -->
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{pies}">Pies</a></li>
+                <li><a th:href="@{contact}">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--  Content Section  -->
+    <div layout:fragment="content">
+        <p>This is filled by the content template.</p>
+    </div>
+
+    <!--  Main footer & navigation bar  -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{pies}">Pies</a></li>
+                <li><a th:href="@{contact}">Contacts</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
